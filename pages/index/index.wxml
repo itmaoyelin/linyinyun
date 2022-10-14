@@ -1,0 +1,70 @@
+<!--pages/index/index.wxml-->
+<view>
+    <!-- 轮播图区域 -->
+    <swiper class="swiper-box" duration="300" indicator-dots indicator-color="#fff" autoplay circular="true"
+        indicator-active-color="#d43c33">
+        <swiper-item>
+            <image class="swiper-pic" src="/static/images/nvsheng.jpg"></image>
+        </swiper-item>
+        <swiper-item>
+            <image class="swiper-pic" src="/static/images/nvsheng.jpg"></image>
+        </swiper-item>
+        <swiper-item>
+            <image class="swiper-pic" src="/static/images/nvsheng.jpg"></image>
+        </swiper-item>
+    </swiper>
+    <!-- 导航栏区域-->
+    <view class="navContainer">
+        <view class="navItem">
+            <text class=" iconfont icon-meirituijian icon-box"></text>
+            <text class="item-text">每日推荐</text>
+        </view>
+        <view class="navItem">
+            <text class=" iconfont icon-gedan1 icon-box "></text>
+            <text class="item-text">歌单</text>
+        </view>
+        <view class="navItem">
+            <text class=" iconfont icon-icon-ranking  icon-box"></text>
+            <text class="item-text">排行榜</text>
+        </view>
+        <view class="navItem">
+            <text class=" iconfont icon-diantai icon-box "></text>
+            <text class="item-text">电台</text>
+        </view>
+        <view class="navItem">
+            <text class=" iconfont icon-zhibobofangshexiangjitianxianxianxing icon-box "></text>
+            <text class="item-text">直播</text>
+        </view>
+    </view>
+    <!-- 推荐区域 -->
+    <view class="recommendContainer">
+        <view class="recommendContainer-header">
+            <text class="title">推荐歌单</text>
+            <view class="tips">
+                <text>为你精心推荐</text>
+                <text class="more">查看更多</text>
+            </view>
+        </view>
+        <!-- 推荐内容区域 -->
+        <scroll-view class="recommendContainer-body" scroll-x="true" enable-flex>
+            <view id="demo1" class="scroll-item">
+                <image src="/static/images/nvsheng.jpg"></image>
+                <text>哈哈哈我是大王哈哈哈哈哈哈hhdccdchccc还是实习生dcn</text>
+            </view>
+            <view id="demo2" class="scroll-item">
+                <image src="/static/images/nvsheng.jpg"></image>
+                <text>哈哈哈我是大王哈哈哈哈哈哈</text>
+            </view>
+            <view id="demo3" class="scroll-item">
+                <image src="/static/images/nvsheng.jpg"></image>
+                <text>哈哈哈</text>
+            </view>
+            <view id="demo4" class="scroll-item">
+                <image src="/static/images/nvsheng.jpg"></image>
+                <text>哈哈哈</text>
+            </view>
+        </scroll-view>
+    </view>
+
+
+</view>

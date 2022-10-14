@@ -1,0 +1,107 @@
+/* pages/index/index.wxss */
+.swiper-box {
+    height: 300rpx;
+    padding: 20rpx;
+}
+
+.swiper-pic {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 20rpx;
+}
+
+.navContainer {
+    display: flex;
+    border-bottom: 1px solid #efefef;
+    margin: 20rpx;
+}
+
+.navItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+}
+
+.icon-box {
+    width: 100rpx;
+    height: 100rpx;
+    text-align: center;
+    line-height: 100rpx;
+    background-color: #d43c33;
+    border-radius: 50%;
+    font-size: 50rpx;
+    color: #fff;
+}
+
+.item-text {
+    padding: 20rpx 0;
+    font-size: 26rpx;
+    color: gray;
+}
+
+.recommendContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 20rpx;
+}
+
+.recommendContainer-header .title {
+    line-height: 80rpx;
+    font-size: 36rpx;
+    color: #666;
+}
+
+.recommendContainer-header .tips {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.more {
+    padding: 10rpx 20rpx;
+    border-radius: 30rpx;
+    border: 1px solid #333;
+    font-size: 24rpx;
+
+}
+
+.recommendContainer-body {
+    display: flex;
+    margin-top: 30rpx;
+}
+
+.scroll-item {
+    width: 200rpx;
+    display: flex;
+    flex-direction: column;
+
+    margin-right: 20rpx;
+}
+
+.scroll-item image {
+    width: 200rpx;
+    height: 200rpx;
+    border-radius: 20rpx;
+}
+
+.scroll-item text {
+    display: block;
+    margin-top: 10rpx;
+    font-size: 26rpx;
+    /* 单行文本溢出隐藏，省略号代替 */
+    /* overflow: hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis; */
+    /* 多行文本溢出隐藏 */
+    display: -webkit-box;
+    /* 设置对齐方式 */
+    -webkit-box-orient: vertical; 
+    /* 设置行数 */
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+
+}
