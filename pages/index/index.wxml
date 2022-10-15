@@ -1,17 +1,11 @@
 <!--pages/index/index.wxml-->
 <view>
     <!-- 轮播图区域 -->
-    <swiper class="swiper-box" duration="300" indicator-dots indicator-color="#fff" autoplay circular="true"
-        indicator-active-color="#d43c33">
-        <swiper-item>
-            <image class="swiper-pic" src="/static/images/nvsheng.jpg"></image>
+    <swiper class="swiper-box" duration="300" indicator-dots indicator-color="#fff" autoplay circular="true" indicator-active-color="#d43c33">
+        <swiper-item wx:for="{{swiperList}}" wx:key="index">
+            <image class="swiper-pic" src="{{item.pic}}"></image>
         </swiper-item>
-        <swiper-item>
-            <image class="swiper-pic" src="/static/images/nvsheng.jpg"></image>
-        </swiper-item>
-        <swiper-item>
-            <image class="swiper-pic" src="/static/images/nvsheng.jpg"></image>
-        </swiper-item>
+
     </swiper>
     <!-- 导航栏区域-->
     <view class="navContainer">
@@ -38,32 +32,36 @@
     </view>
     <!-- 推荐区域 -->
     <view class="recommendContainer">
-        <view class="recommendContainer-header">
-            <text class="title">推荐歌单</text>
-            <view class="tips">
-                <text>为你精心推荐</text>
-                <text class="more">查看更多</text>
-            </view>
+        <!-- 推荐头部区域 -->
+        <view class="ranking-header">
+           <NavHeader title='推荐歌单' tips='为你精心推荐'></NavHeader>
         </view>
         <!-- 推荐内容区域 -->
         <scroll-view class="recommendContainer-body" scroll-x="true" enable-flex>
-            <view id="demo1" class="scroll-item">
-                <image src="/static/images/nvsheng.jpg"></image>
-                <text>哈哈哈我是大王哈哈哈哈哈哈hhdccdchccc还是实习生dcn</text>
-            </view>
-            <view id="demo2" class="scroll-item">
-                <image src="/static/images/nvsheng.jpg"></image>
-                <text>哈哈哈我是大王哈哈哈哈哈哈</text>
-            </view>
-            <view id="demo3" class="scroll-item">
-                <image src="/static/images/nvsheng.jpg"></image>
-                <text>哈哈哈</text>
-            </view>
-            <view id="demo4" class="scroll-item">
-                <image src="/static/images/nvsheng.jpg"></image>
-                <text>哈哈哈</text>
+            <view class="scroll-item" wx:for="{{recommendMusicList}}" wx:key="id">
+                <image src="{{item.picUrl}}"></image>
+                <text>{{item.name}}</text>
             </view>
         </scroll-view>
+    </view>
+    <!-- 排行榜区域 -->
+    <view class="ranking-box">
+        <!-- 排行榜头部区域 -->
+        <view class="ranking-header">
+           <NavHeader title='排行榜' tips='热歌风向标'></NavHeader>
+        </view>
+        <!-- 排行榜内容区域 -->
+       <swiper class="ranking-swiper"  next-margin="50rpx">
+       <swiper-item wx:for="{{rankingList}}" wx:key="index">
+       <view class="title">{{item.name}} ></view>
+       <view class="music-item" wx:for="{{item.tracks}}" wx:key="id" wx:for-item="musicItem">
+       <image src="{{musicItem.al.picUrl}}"></image>
+       <text class="count">{{index+1}}</text>
+       <text class="music-name">{{musicItem.al.name}}</text>
+       </view>
+       </swiper-item>
+       
+       </swiper>
     </view>
 
 

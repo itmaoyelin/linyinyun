@@ -47,38 +47,17 @@
     flex-direction: column;
     padding: 20rpx;
 }
-
-.recommendContainer-header .title {
-    line-height: 80rpx;
-    font-size: 36rpx;
-    color: #666;
-}
-
-.recommendContainer-header .tips {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-}
-
-.more {
-    padding: 10rpx 20rpx;
-    border-radius: 30rpx;
-    border: 1px solid #333;
-    font-size: 24rpx;
-
-}
-
 .recommendContainer-body {
     display: flex;
     margin-top: 30rpx;
+    height: 300rpx;
+    border-bottom: 1px solid #efefef;
 }
 
 .scroll-item {
     width: 200rpx;
     display: flex;
     flex-direction: column;
-
     margin-right: 20rpx;
 }
 
@@ -104,4 +83,37 @@
     -webkit-line-clamp: 2;
     overflow: hidden;
 
+}
+.ranking-box{
+    padding: 20rpx;
+} 
+.ranking-swiper{
+    height: 400rpx;
+}
+.ranking-swiper .title{
+    padding: 30rpx 0;
+    font-size: 28rpx;
+}
+.music-item{
+    width: 96%;
+    display: flex;
+    align-items: center;
+    padding: 10rpx 0;
+    background-color: #fbfbfb;
+  
+}
+.music-item image{
+    width: 80rpx;
+    height: 80rpx;
+    border-radius: 6rpx;
+}
+.music-item .count{
+    margin: 0 50rpx;
+}
+.music-name{
+    max-width: 400rpx;
+    /* 单行文本不换行用省略号 */
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
