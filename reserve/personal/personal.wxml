@@ -11,36 +11,38 @@
     </view>
 
     <view class="vip-card-box">
-      <image class="card-bg" src="/static/images/personal/vip-card-bg.png" ></image>
+      <image class="card-bg" src="/static/images/personal/vip-card-bg.png" mode=""></image>
       <view class="b-btn">
         立即开通
       </view>
       <view class="tit">
         <!-- 会员图标-->
         <text class="iconfont icon-huiyuan-"></text>
-        林音云会员
+        硅谷会员
       </view>
-      <text class="e-m">linyinyun Union</text>
-      <text class="e-b">开通会员，享受听歌</text>
+      <text class="e-m">atguigu Union</text>
+      <text class="e-b">开通会员听歌, 撸代码</text>
     </view>
   </view>
-  <view class="cover-container" bindtouchstart="handleTouchStart" bindtouchmove="handleTouchMove" bindtouchend="handleTouchEnd" style="transform: {{transform}};transition: {{transition}};">
+
+
+  <view class="cover-container">
     <image class="arc" src="/static/images/personal/arc.png"></image>
     <!-- 个人中心导航 -->
     <view class="nav-section">
-      <view class="nav-item" hover-class="common-hover" hover-stay-time="50">
+      <view class="nav-item"  hover-class="common-hover"  hover-stay-time="50">
         <text class="iconfont icon-xiaoxi"></text>
         <text>我的消息</text>
       </view>
-      <view class="nav-item" hover-class="common-hover" hover-stay-time="50">
+      <view class="nav-item"   hover-class="common-hover" hover-stay-time="50">
         <text class="iconfont icon-myRecommender"></text>
         <text>我的好友</text>
       </view>
-      <view class="nav-item" hover-class="common-hover" hover-stay-time="50">
+      <view class="nav-item"  hover-class="common-hover"  hover-stay-time="50">
         <text class="iconfont icon-gerenzhuye"></text>
         <text>个人主页</text>
       </view>
-      <view class="nav-item" hover-class="common-hover" hover-stay-time="50">
+      <view class="nav-item" hover-class="common-hover"  hover-stay-time="50">
         <text class="iconfont icon-gexingzhuangban"></text>
         <text>个性装扮</text>
       </view>

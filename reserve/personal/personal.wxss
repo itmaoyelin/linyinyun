@@ -48,7 +48,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  /* background: linear-gradient(left, red, black); */
+ /* background: linear-gradient(left, red, black); */
   background: rgba(0, 0, 0, .7);
   height: 240rpx;
   color: #f7d680;
@@ -64,6 +64,22 @@
   width: 380rpx;
   height: 260rpx;
 }
+
+.vip-card-box .b-btn{
+  position: absolute;
+  right: 20rpx;
+  top: 16rpx;
+  width: 132rpx;
+  height: 40rpx;
+  text-align: center;
+  line-height: 40rpx;
+  font-size: 22rpx;
+  color: #36343c;
+  border-radius: 20px;
+  background: #f9e6af;
+  z-index: 1;
+}
+
 .vip-card-box .b-btn{
   position: absolute;
   right: 20rpx;
@@ -89,6 +105,10 @@
   color: #f6e5a3;
   margin-right: 16rpx;
 }
+
+
+
+
 .vip-card-box .e-m{
   font-size: 34rpx;
   margin-top: 10rpx;
@@ -98,6 +118,8 @@
   color: #d8cba9;
   margin-top: 10rpx;
 }
+
+
 .cover-container{
   margin-top: -150rpx;
   padding: 0 30rpx;
@@ -113,6 +135,8 @@
   width: 100%;
   height: 36rpx;
 }
+
+
 /* 导航部分 */
 .cover-container .nav-section {
   display: flex;

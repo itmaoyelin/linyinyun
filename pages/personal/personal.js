@@ -1,11 +1,47 @@
 // pages/personal/personal.js
+let startY=0 //开始的距离
+let moveY=0 //移动后的距离
+let moveDistance
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-
+        //移动距离
+        transform:'translateY(0)',
+        //缓慢移动
+        transition:''
+    },
+    handleTouchStart(e){
+        // console.log('start' ,e)
+        startY=e.touches[0].clientY
+        this.setData({
+            transition:''
+        })
+    },
+    handleTouchMove(e){
+        // console.log('move')
+        moveY=e.touches[0].clientY
+        moveDistance=moveY-startY
+        if(moveDistance<=0) return  //不移动
+        if(moveDistance>=80){
+            moveDistance=80
+        }
+        // console.log(moveDistance)
+        //开始移动
+        this.setData({
+            transform:`translateY(${moveDistance}rpx)`
+        })
+        
+    },
+    handleTouchEnd(){
+        //移动结束，开始复原
+        this.setData({
+            transform:`translateY(0)`,
+            // 1秒平滑过渡
+            transition:`transform 1s linear`
+        })
     },
 
     /**
