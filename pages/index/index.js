@@ -40,16 +40,21 @@ Page({
             // console.log(res)
             //重组对象
             let rankingItem={name:res.playlist.name,tracks:res.playlist.tracks.slice(0,3)}
-            //更新排行榜列表数据
+            // 更新排行榜列表数据
             this.setData({
                 rankingList:[...this.data.rankingList,rankingItem]
             })
-        }
-        
-       
+        }  
     },
-
-
+    //获取新的排行榜数据的方法
+    async getTopList(){
+        const {data:res}=await request('/toplist/detail')
+        // console.log(res) 
+        //更新排行榜列表数据
+        this.setData({
+            rankingList:res.list.slice(0,4)
+        })
+    },
     /**
      * 生命周期函数--监听页面加载
      */
@@ -59,7 +64,9 @@ Page({
         //调用方法获取推荐歌单数据
         this.getRecommendMusic()
         //调用方法获取排行榜数据列表
+        // this.getTopList()
         this.getRankingList()
+        
     },
 
     /**

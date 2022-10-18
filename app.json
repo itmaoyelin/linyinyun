@@ -2,33 +2,33 @@
     "pages": [
         "pages/index/index",
         "pages/video/video",
-        "pages/personal/personal"
+        "pages/personal/personal",
+        "pages/login/login"
     ],
     "tabBar": {
         "selectedColor": "#d43c33",
         "backgroundColor": "#fff",
         "list": [
             {
-             "pagePath": "pages/index/index",
-             "text": "首页",
-             "iconPath": "/static/images/tabs/home.png",
-             "selectedIconPath": "/static/images/tabs/tab-home-current.png"
-             },
-             {
-                 "pagePath": "pages/video/video",
-                 "text": "视频",
-                 "iconPath": "/static/images/video/video.png",
-                 "selectedIconPath": "/static/images/video/video-current.png"
-             },
-             {
-                 "pagePath": "pages/personal/personal",
-                 "text": "个人中心",
-                 "iconPath": "/static/images/tabs/tab-my.png",
-                 "selectedIconPath": "/static/images/tabs/tab-my-current.png"
-             }
+                "pagePath": "pages/index/index",
+                "text": "首页",
+                "iconPath": "/static/images/tabs/home.png",
+                "selectedIconPath": "/static/images/tabs/tab-home-current.png"
+            },
+            {
+                "pagePath": "pages/video/video",
+                "text": "视频",
+                "iconPath": "/static/images/video/video.png",
+                "selectedIconPath": "/static/images/video/video-current.png"
+            },
+            {
+                "pagePath": "pages/personal/personal",
+                "text": "个人中心",
+                "iconPath": "/static/images/tabs/tab-my.png",
+                "selectedIconPath": "/static/images/tabs/tab-my-current.png"
+            }
         ]
-     },
-     
+    },
     "window": {
         "backgroundTextStyle": "light",
         "navigationBarBackgroundColor": "#d43c33",
@@ -38,6 +38,7 @@
     "style": "v2",
     "sitemapLocation": "sitemap.json",
     "usingComponents": {
-        "NavHeader": "/components/NavHeader/NavHeader"
+        "NavHeader": "/components/NavHeader/NavHeader",
+        "PlayList":"/components/PlayList/PlayList"
     }
 }

@@ -1,0 +1,37 @@
+/* components/PlayList/PlayList.wxss */
+.scroll-body {
+    display: flex;
+    margin-top: 30rpx;
+    height: 200rpx;
+    border-bottom: 1px solid #efefef;
+}
+
+.scroll-item {
+    width: 160rpx;
+    display: flex;
+    flex-direction: column;
+    margin-right: 20rpx;
+}
+
+.scroll-item-pic {
+    width: 160rpx;
+    height: 160rpx;
+    border-radius: 20rpx;
+}
+.scroll-item-name {
+    display: block;
+    margin-top: 10rpx;
+    font-size: 26rpx;
+    /* 单行文本溢出隐藏，省略号代替 */
+    overflow: hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    /* 多行文本溢出隐藏 */
+     /* display: -webkit-box; */
+    /* 设置对齐方式 */
+    /* -webkit-box-orient: vertical;  */
+    /* 设置行数 */
+    /* -webkit-line-clamp: 2; */
+    /* overflow: hidden;  */
+
+}

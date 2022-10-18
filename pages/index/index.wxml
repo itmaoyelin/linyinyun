@@ -53,11 +53,17 @@
         <!-- 排行榜内容区域 -->
        <swiper class="ranking-swiper"  next-margin="50rpx">
        <swiper-item wx:for="{{rankingList}}" wx:key="index">
-       <view class="title">{{item.name}} ></view>
+       <view class="title">
+        <text class="title-name">{{item.name}} ></text>
+        <text class="title-tip">{{index%2==0?'云村用户都在听':'全网用户都在听'}}</text>
+       </view>
        <view class="music-item" wx:for="{{item.tracks}}" wx:key="id" wx:for-item="musicItem">
        <image src="{{musicItem.al.picUrl}}"></image>
        <text class="count">{{index+1}}</text>
-       <text class="music-name">{{musicItem.al.name}}</text>
+       <view class="music-info">
+        <text class="music-name">{{musicItem.al.name}}</text>
+        <text class="author-name">{{musicItem.ar[0].name}}</text>
+       </view>
        </view>
        </swiper-item>
        

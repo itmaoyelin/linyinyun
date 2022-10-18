@@ -89,17 +89,30 @@
 } 
 .ranking-swiper{
     height: 400rpx;
+    margin-top: 20rpx;
 }
 .ranking-swiper .title{
+    display: flex;
+    justify-content: space-between;
     padding: 30rpx 0;
-    font-size: 28rpx;
+
 }
+.title-name{
+    font-size: 32rpx;
+    font-weight: 700;
+}
+.title-tip{
+    font-size: 26rpx;
+    color: #aaa;
+    margin-right: 50rpx;
+}
+
 .music-item{
     width: 96%;
     display: flex;
     align-items: center;
     padding: 10rpx 0;
-    background-color: #fbfbfb;
+    background-color: #fff;
   
 }
 .music-item image{
@@ -108,12 +121,24 @@
     border-radius: 6rpx;
 }
 .music-item .count{
-    margin: 0 50rpx;
+    margin: 0 30rpx;
+    font-size: 26rpx;
+    font-weight: 700;
+}
+.music-info{
+    display: flex;
+    flex-direction: column;
 }
 .music-name{
     max-width: 400rpx;
+    font-size: 26rpx;
     /* 单行文本不换行用省略号 */
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+}
+.author-name{
+    font-size: 22rpx;
+    color: #aaa;
+    margin-top: 10rpx;
 }

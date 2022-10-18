@@ -1,4 +1,7 @@
 // pages/personal/personal.js
+//导入发送请求的方法
+import request from '../../utils/request'
+
 let startY=0 //开始的距离
 let moveY=0 //移动后的距离
 let moveDistance
@@ -11,7 +14,50 @@ Page({
         //移动距离
         transform:'translateY(0)',
         //缓慢移动
-        transition:''
+        transition:'',
+        //用户信息
+        userInfo:{},
+        //播放记录列表
+        recentPlayList:[]
+    },
+    //登录事件处理函数
+    gotoLogin(){
+        if(this.data.userInfo.token) return
+        wx.navigateTo({
+          url: '/pages/login/login',
+        })
+      
+    },
+    //退出登录
+   async logout(){
+     if(!this.data.userInfo.token) return 
+      const res= await wx.showModal({
+            text:'提示',
+            content:'确定要退出登录吗?'
+        })
+        if(!res.confirm) return
+        //清空本地存储
+        wx.setStorageSync('userInfo', '')
+        this.updateUserInfo()
+        //跳回登录页面
+        wx.navigateTo({
+          url: '/pages/login/login',
+        })
+    },
+    //更新userInfo数据
+    updateUserInfo(){
+        this.setData({
+            userInfo:JSON.parse(wx.getStorageSync('userInfo')||'{}')
+        })
+    },
+    //获取用户的播放记录方法
+   async getPlayList(){
+       if(!this.data.userInfo.token) return 
+        const {data:res}=await request('/user/record',{uid:this.data.userInfo.userId,type:0})
+        // console.log(res)
+        this.setData({
+            recentPlayList:res.allData
+        })
     },
     handleTouchStart(e){
         // console.log('start' ,e)
@@ -48,7 +94,10 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad(options) {
-
+        //调用方法更新userInfo数据
+        this.updateUserInfo()
+        //调用方法获取用户播放记录
+        this.getPlayList()
     },
 
     /**
@@ -62,8 +111,11 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow() {
-
-    },
+     //调用方法更新userInfo数据
+    this.updateUserInfo()
+     //调用方法获取用户播放记录
+     this.getPlayList()
+     },
 
     /**
      * 生命周期函数--监听页面隐藏
