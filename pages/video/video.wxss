@@ -1,1 +1,105 @@
 /* pages/video/video.wxss */
+@import '/static/iconfont/font.wxss';
+.video-container {
+    padding: 0 10rpx;
+}
+
+.video-header {
+    padding: 20rpx 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.video-search {
+    width: 100%;
+    height: 60rpx;
+    line-height: 60rpx;
+    border-radius: 10rpx;
+    border: 1px solid #efefef;
+    text-align: center;
+    color: #d43c33;
+    font-size: 16px;
+    margin: 0 10rpx;
+}
+
+.video-header image {
+    width: 60rpx;
+    height: 60rpx;
+}
+
+.video-nav {
+    display: flex;
+    height: 70rpx;
+    overflow: hidden;
+    /* border: 1px solid red; */
+}
+
+.nav-item {
+    padding: 0 30rpx;
+    line-height: 60rpx;
+    /* 不允许换行 */
+    white-space: nowrap;
+}
+.video-nav .active {
+    border-bottom: 1px solid #d43c33;
+    color: #d43c33;
+}
+.video-scroll{
+    /* height: 930rpx; */
+    height: calc(100vh - 180rpx);
+}
+.video-scroll .video-scroll-item{
+    padding: 10rpx 20rpx;
+}
+.video-scroll .common{
+    width: 100%; 
+    height: 360rpx;
+    border-radius: 10rpx;
+}
+
+.video-title{
+    font-size: 14px;
+    padding: 20rpx 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+/* 视频底部区域 */
+.video-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10rpx 0;
+    border-top: 1px solid #efefef;
+
+}
+.vide-author{
+    display: flex;
+    align-items: center;
+   
+}
+.vide-author .video-avatar{
+    width: 50rpx;
+    height: 50rpx;
+    border-radius: 50%;
+}
+.vide-author  .video-avatar-name{
+    font-size: 14px;
+    white-space: nowrap;
+    margin-left: 10rpx;
+}
+.comments-praised {
+    display: flex;
+    align-items: center;
+}
+.comments-praised .item{
+    display: flex;
+    padding: 10rpx;
+}
+.item .count{
+    font-size:14px ;
+}
+.btn{
+    background:#fff;
+    font-size: 10px;
+}

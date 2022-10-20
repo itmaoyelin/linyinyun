@@ -6,7 +6,13 @@
         <image class="portrait" src='{{userInfo.avatarUrl||"/static/images/personal/missing-face.png"}}'></image>
       </view>
       <view class="info-box">
-        <text class="username">{{userInfo.nickname||'游客'}}</text>
+        <text class="username">{{userInfo.nickname||'立即登录'}}</text>
+        <image class="sex" wx:if="{{userInfo.token&&userInfo.gender!==0}}" src="{{userInfo.gender==2?'/static/images/girl.png':'/static/images/boy.png'}}"></image>
+       <view class="info-box-detail" wx:if="{{userInfo.token}}">
+       <text>{{userInfo.follows}}关注</text>
+       <text>{{userInfo.followeds}}粉丝</text>
+       <text>Lv.{{userInfo.playlistCount}}</text>
+       </view>
       </view>
     </view>
 
@@ -49,7 +55,7 @@
     <!-- 个人中心列表 -->
     <view class="personalContent">
       <view class="recentPlayContainer">
-        <text class="title">最近播放({{recentPlayList.length}})</text>
+        <text class="title" wx:if="{{userInfo.token}}">最近播放({{recentPlayList.length}})</text>
         <!-- 最近播放记录 -->
         <block wx:if="{{userInfo.token&&recentPlayList[0].song}}">
             <PlayList playList="{{recentPlayList}}"></PlayList>

@@ -49,10 +49,16 @@ Page({
                avatarUrl:res.profile.avatarUrl,
                backgroundUrl:res.profile.backgroundUrl,
                token:res.token,
-               userId:res.profile.userId
+               userId:res.profile.userId,
+               follows:res.profile.follows, //关注
+               followeds:res.profile.followeds,//粉丝
+               gender:res.profile.gender,//性别
+               playlistCount:res.profile.playlistCount //等级
             }
             //将用户信息存储到本地
            wx.setStorageSync('userInfo', JSON.stringify(userInfo))
+           //将cookie存储到本地
+           wx.setStorageSync('cookie',res.cookie.split(';;').find((item=>item.indexOf('MUSIC_U')!==-1)))
            wx.switchTab({
              url: '/pages/personal/personal',
            })

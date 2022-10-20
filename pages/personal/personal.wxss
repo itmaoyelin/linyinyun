@@ -37,11 +37,20 @@
   border-radius: 50%;
 }
 .user-info-box .username{
-  font-size: 24;
+  font-size: 32rpx;
   color: #303133;
   margin-left: 20rpx;
+  font-weight: 700;
 }
-
+.info-box .info-box-detail text{
+    font-size: 24rpx;
+    margin: 0 20rpx;
+}
+.info-box .sex{
+    margin-left: 10rpx;
+    width: 30rpx;
+    height: 30rpx;
+}
 
 /* vip-box */
 .vip-card-box {

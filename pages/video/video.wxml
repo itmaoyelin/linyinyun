@@ -1,2 +1,59 @@
 <!--pages/video/video.wxml-->
-<text>pages/video/video.wxml</text>
+<view class="video-container">
+    <!-- 头部区域 -->
+    <view class="video-header">
+        <image src="/static/images/video/video1.png"></image>
+        <view class="video-search">搜索</view>
+        <image src="/static/images/logo.png"></image>
+    </view>
+    <!-- 导航区域 -->
+    <scroll-view class="video-nav" scroll-x enable-flex scroll-into-view="{{'M'+navId}}" scroll-with-animation>
+        <view id="{{'M'+item.id}}" class="nav-item " wx:for="{{navList}}" wx:key="index">
+            <view class="item-content {{item.id===navId?'active':''}}" id="{{item.id}}" bindtap="updateActive">{{item.name==='#歌手#'?'歌手':item.name}}</view>
+        </view>
+    </scroll-view>
+    <!-- 视频区域 -->
+    <scroll-view class="video-scroll" scroll-y 	refresher-enabled  	refresher-triggered="{{isTriggered}}"
+    	bindrefresherrefresh="refreshHandle" bindscrolltolower="tolowerHandler" lower-threshold>
+        <view class="video-scroll-item" wx:for="{{videoUrl}}" wx:key="index">
+            <!-- 视频区域 -->
+            <video src="{{item.url}}" enable-play-gesture="true" loop="true" enable-progress-gesture="true"	enable-auto-rotation="true" show-screen-lock-button="true" show-snapshot-button="true" 	autoplay
+            bindplay="playHandle" bindtimeupdate="UpdateTimeHandle" bindended="endedHandle" 
+             id="{{item.id}}"  object-fit="cover"
+            poster="{{item.cover}}" class="common" wx:if="{{item.id===videoId}}"
+            ></video>
+            <!-- 视频预览图 -->
+            <image src="{{item.cover}}" class="common" bindtap="playHandle" 
+            wx:else id="{{item.id}}"></image>
+            <!-- 标题区域 -->
+            <block wx:for="{{videoList}}" wx:for-item="item2" wx:for-index="key" wx:key="key">
+                <view wx:if="{{item.id===item2.data.vid}}">
+                    <view class="video-title">{{item2.data.title}}</view>
+                    <view class="video-footer">
+                        <!-- 作者头像区域 -->
+                        <view class="vide-author">
+                            <image src="{{item2.data.creator.avatarUrl}}" class="video-avatar"></image>
+                            <text class="video-avatar-name">{{item2.data.creator.nickname}}</text>
+                        </view>
+                        <!-- 评论点赞区域 -->
+                        <view class="comments-praised">
+                            <text class="item">
+                                <text class="iconfont icon-buoumaotubiao15"></text>
+                                <text class="count">{{item2.data.praisedCount}}</text>
+                            </text>
+                            <text class="item">
+                                <text class="iconfont icon-pinglun1"></text>
+                                <text class="count">{{item2.data.commentCount}}</text>
+                            </text>
+                            <button open-type="share" class=" item btn" size="mini">
+                                <text class="iconfont icon-fenxiang"></text>
+                            </button>
+                        </view>
+                    </view>
+                </view>
+
+            </block>
+        </view>
+
+    </scroll-view>
+</view>
