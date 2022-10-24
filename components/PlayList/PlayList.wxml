@@ -1,6 +1,6 @@
 <!-- components/PlayList/PlayList.wxml -->
 <scroll-view class="scroll-body" scroll-x="true" enable-flex>
-    <view class="scroll-item" wx:for="{{playList}}" wx:key="index">
+    <view class="scroll-item" wx:for="{{playList}}" wx:key="index" data-song="{{item.song}}" bindtap="gotoHandle">
         <image class="scroll-item-pic" src="{{item.song.al.picUrl}}"></image>
         <text class="scroll-item-name">{{item.song.name}}</text>
     </view>

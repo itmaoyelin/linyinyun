@@ -9,7 +9,7 @@
     </swiper>
     <!-- 导航栏区域-->
     <view class="navContainer">
-        <view class="navItem">
+        <view class="navItem" bindtap="gotoRecommend">
             <text class=" iconfont icon-meirituijian icon-box"></text>
             <text class="item-text">每日推荐</text>
         </view>
@@ -57,7 +57,7 @@
         <text class="title-name">{{item.name}} ></text>
         <text class="title-tip">{{index%2==0?'云村用户都在听':'全网用户都在听'}}</text>
        </view>
-       <view class="music-item" wx:for="{{item.tracks}}" wx:key="id" wx:for-item="musicItem">
+       <view class="music-item" wx:for="{{item.tracks}}" wx:key="id" wx:for-item="musicItem" data-song="{{musicItem}}"  bindtap="gotoSongDeatil">
        <image src="{{musicItem.al.picUrl}}"></image>
        <text class="count">{{index+1}}</text>
        <view class="music-info">

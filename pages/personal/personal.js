@@ -59,6 +59,15 @@ Page({
             recentPlayList:res.allData
         })
     },
+    //自定义事件处理函数
+    gotoDetail(e){
+        // console.log(e)
+        //调用函数跳转音乐详情
+        let songInfo=JSON.stringify(e.detail.value)
+        wx.navigateTo({
+          url: '/pages/songDetail/songDetail?song='+encodeURIComponent(songInfo),
+        })
+    },
     handleTouchStart(e){
         // console.log('start' ,e)
         startY=e.touches[0].clientY

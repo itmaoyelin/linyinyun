@@ -1,0 +1,66 @@
+/* pages/recommendSong/recommendSong.wxss */
+.recommend-header .header-pic{
+    display: block;
+    width: 100%;
+    height: 300rpx;
+}
+.recommend-date{
+    position: absolute;
+    width: 200rpx;
+    height: 100rpx;
+    color: #fff;
+    font-size: 36rpx;
+    text-align: center;
+    line-height: 100rpx;
+    transform: translate(290rpx,-190rpx)
+}
+.recommend-date .day{
+    font-size: 40rpx;
+}
+.recommend-list{
+    transform: translateY(-10rpx);
+    background-color: #fff;
+    padding: 0 20rpx;
+    border-radius: 30rpx 30rpx 0 0;
+ 
+}
+.recommend-list .list-header{
+    display: flex;
+    justify-content:space-between ;
+    line-height: 80rpx;
+    font-size: 18px;   
+}
+.scroll-item{
+    display: flex;
+    justify-content:space-between ;
+    align-items: center;
+    margin-top: 20rpx ;
+    border-bottom: 1px solid #efefef;
+    box-shadow: 1px 1px 2px #f1f1f1;
+}
+.item-header{
+    display: flex;
+}
+.item-header .item-pic{
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 10rpx;
+}
+.item-header .item-title{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    margin-left: 20rpx; 
+    padding: 10rpx 0;
+}
+.item-title text{
+    font-size: 13px;  
+    max-width: 500rpx;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.item-title .author-name{
+    font-size:12px ;
+    color: #aaa;
+}

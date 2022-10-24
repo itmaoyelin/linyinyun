@@ -3,7 +3,9 @@
         "pages/index/index",
         "pages/video/video",
         "pages/personal/personal",
-        "pages/login/login"
+        "pages/login/login",
+        "pages/recommendSong/recommendSong",
+        "pages/songDetail/songDetail"
     ],
     "tabBar": {
         "selectedColor": "#d43c33",
@@ -39,6 +41,8 @@
     "sitemapLocation": "sitemap.json",
     "usingComponents": {
         "NavHeader": "/components/NavHeader/NavHeader",
-        "PlayList":"/components/PlayList/PlayList"
-    }
+        "PlayList": "/components/PlayList/PlayList"
+    },
+    "requiredBackgroundModes": ["audio"]
+   
 }

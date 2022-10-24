@@ -1,0 +1,35 @@
+<!--pages/songDetail/songDetail.wxml-->
+<view class="songDetail-container" wx:if="{{songUrl}}">
+    <view class="song-author">{{songInfo.ar[0].name}}</view>
+    <!-- 摇杆图 -->
+    <view class="circle"></view>
+    <image class="needle {{isPlay && 'needRotate'}}" src="../../static/images/song/needle.png"></image>
+    <!-- 磁盘图 -->
+    <view class="discContainer {{isPlay && 'discAnimation'}}" >
+        <image class="disc" src="../../static/images/song/disc.png"></image>
+        <image class="music-img" src="{{songInfo.al.picUrl}}"></image>
+    </view>
+   <!-- 进度条区域 -->
+   <view class="progress-control">
+    <text>{{currentTime}}</text>
+    <!-- 进度条 -->
+    <view class="progress-bar">
+        <!-- 实时进度条 -->
+        <view class="progress-time" style="width: {{width}};">
+            <!-- 小圆球 -->
+            <view class="progress-circle"></view>
+        </view>
+    </view>
+    <text>{{totalTime}}</text>
+   </view>
+    <!-- 底部控制播放区域 -->
+    <view class="music-Control">
+        <text class="iconfont icon-iconsMusicyemianbofangmoshiShuffle"></text>
+        <text class="iconfont icon-shangyishoushangyige" data-type="pre" bindtap="switchHandle"></text>
+        <text class="iconfont {{isPlay?'icon-zanting':'icon-bofang'}} big" bindtap="updateIsPlay"></text>
+        <text class="iconfont icon-xiayigexiayishou " data-type="next" bindtap="switchHandle"></text>
+        <text class="iconfont icon-iconsMusicyemianbofangmoshiPlayList"></text>
+    </view>
+</view>
+<view wx:else class="songErr">{{errMsg}}</view>
+

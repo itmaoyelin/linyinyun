@@ -3,7 +3,7 @@
     "projectname": "linyinyun",
     "setting": {
         "compileHotReLoad": false,
-        "urlCheck": true
+        "urlCheck": false
     },
     "condition": {
         "miniprogram": {
@@ -28,8 +28,23 @@
                     "query": "",
                     "launchMode": "default",
                     "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pages/recommendSong/recommendSong",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pages/songDetail/songDetail",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
                 }
             ]
         }
-    }
+    },
+    "libVersion": "2.19.6"
 }

@@ -1,0 +1,140 @@
+/* pages/songDetail/songDetail.wxss */
+@import '../../static/iconfont/font.wxss';
+page{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.songDetail-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.song-author{
+    color: #fff;
+}
+/* 圆形底座 */
+.circle{
+    position: relative;
+    margin-top: 20rpx;
+    height: 60rpx;
+    width: 60rpx;
+    z-index: 99;
+    border-radius: 50%;
+    background-color: #f7f7f8;
+    box-shadow: 0 0 10px #f7f7f8;
+}
+  .needle{
+    position: relative;
+    top:-30rpx;
+    left: 60rpx;
+    z-index: 1;
+    width: 192rpx;
+    height: 274rpx;
+     /* 控制旋转中心点 x轴向右40rpx 逆时针旋转20度*/
+    transform-origin:40rpx 0 0;
+    transform: rotate(-20deg);
+    transition:transform 1s; 
+     /* 指定1秒完成 */
+}
+/* 播放旋转 */
+.songDetail-container .needRotate{
+/* 旋转0度 */
+ transform: rotate(0deg);
+
+}
+.discContainer{
+    position: relative;
+    top:-170rpx;
+    width: 598rpx;
+    height: 598rpx;
+    /* border: 1px solid red; */
+}
+.discAnimation{
+    /* 选择器取名disc 4秒完成 平滑完成 无限循环 */
+    animation: disc 4s linear infinite;
+    animation-delay:1s;
+    /* 延迟1秒开始 */
+}
+/* 指定动画名称 规定动画帧数 */ 
+@keyframes  disc{
+    /* 从0度旋转到360度 */
+    from {
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+.disc{
+    width: 100%;
+    height: 100%;
+}
+.music-img{
+    position: absolute;
+    left:114rpx;
+    top:114rpx;
+    width: 370rpx;
+    height: 370rpx;
+    border-radius: 50%;
+}
+.songErr{
+    display: flex;
+    height: 750rpx;
+    justify-content: center;
+    align-items: center;
+}
+.music-Control{
+    position: absolute;
+    bottom: 40rpx;
+    width: 100%;
+   /* background-color: #fff;s */
+   border-top: 1px solid #fff;
+   padding-top: 20rpx;
+}
+
+.music-Control text{
+    width: 20%;
+    text-align: center;
+    line-height: 120rpx;
+    font-size: 80rpx;
+    margin: 0 30rpx;
+    color: #fff;
+}
+.music-Control .big{
+    font-size: 100rpx;
+}
+.progress-control{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80rpx;
+    width: 640rpx;
+    /* transform: translateY(-100rpx); */
+    position: absolute;
+    bottom: 240rpx;
+}
+.progress-bar{
+    position: relative;
+    width: 450rpx;
+    height: 4rpx;
+    background-color: rgba(0,0,0, .4);
+    margin: 0 5rpx;
+}
+.progress-time{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    /* width: 20%; */
+    height: 4rpx;
+    background-color:red;
+}
+.progress-circle{
+    position: absolute;
+    right: -12rpx;
+    top: -4rpx;
+    width: 12rpx;
+    height: 12rpx;
+    border-radius: 50%;
+    background-color: #fff;
+}

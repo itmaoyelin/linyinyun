@@ -55,6 +55,20 @@ Page({
             rankingList:res.list.slice(0,4)
         })
     },
+    //跳转到每日推荐页
+    gotoRecommend(){
+        wx.navigateTo({
+          url: '/pages/recommendSong/recommendSong',
+        })
+    },
+    // 跳转到详情页
+    gotoSongDeatil(e){
+        // console.log(e)
+        let songInfo=JSON.stringify(e.currentTarget.dataset.song)
+        wx.navigateTo({
+          url: '/pages/songDetail/songDetail?song='+encodeURIComponent(songInfo),
+        })
+    },
     /**
      * 生命周期函数--监听页面加载
      */

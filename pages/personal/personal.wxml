@@ -58,7 +58,7 @@
         <text class="title" wx:if="{{userInfo.token}}">最近播放({{recentPlayList.length}})</text>
         <!-- 最近播放记录 -->
         <block wx:if="{{userInfo.token&&recentPlayList[0].song}}">
-            <PlayList playList="{{recentPlayList}}"></PlayList>
+            <PlayList playList="{{recentPlayList}}"  bindGoto="gotoDetail"></PlayList>
         </block>
       </view>
 
