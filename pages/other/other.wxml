@@ -1,0 +1,8 @@
+<!--pages/other/other.wxml-->
+<!-- 引入模板 -->
+<import src="/templete/mytemplete/mytemplete.wxml"/>
+<view class="other-container">
+    <text>欢迎使用模板</text>
+    <!-- 使用模板 -->
+    <template is="myTmp" data="{{...personal}}" />
+</view>

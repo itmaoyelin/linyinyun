@@ -3,7 +3,7 @@
     <!-- 头部区域 -->
     <view class="video-header">
         <image src="/static/images/video/video1.png"></image>
-        <view class="video-search">搜索</view>
+        <view class="video-search" bindtap="gotoSearch">搜索音乐</view>
         <image src="/static/images/logo.png"></image>
     </view>
     <!-- 导航区域 -->

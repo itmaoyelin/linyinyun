@@ -1,0 +1,3 @@
+/* pages/other/other.wxss */
+/* 引入模板样式 */
+@import '/templete/mytemplete/mytemplete.wxss'

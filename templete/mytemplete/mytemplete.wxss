@@ -1,0 +1,5 @@
+/* templete/mytemplete/mytemplete.wxss */
+.title{
+    color: red;
+    font-size: 18px;
+}

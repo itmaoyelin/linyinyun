@@ -5,7 +5,9 @@
         "pages/personal/personal",
         "pages/login/login",
         "pages/recommendSong/recommendSong",
-        "pages/songDetail/songDetail"
+        "pages/songDetail/songDetail",
+        "pages/search/search",
+        "pages/other/other"
     ],
     "tabBar": {
         "selectedColor": "#d43c33",
@@ -43,6 +45,7 @@
         "NavHeader": "/components/NavHeader/NavHeader",
         "PlayList": "/components/PlayList/PlayList"
     },
-    "requiredBackgroundModes": ["audio"]
-   
+    "requiredBackgroundModes": [
+        "audio"
+    ]
 }

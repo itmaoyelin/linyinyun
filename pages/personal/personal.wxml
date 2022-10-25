@@ -6,7 +6,7 @@
         <image class="portrait" src='{{userInfo.avatarUrl||"/static/images/personal/missing-face.png"}}'></image>
       </view>
       <view class="info-box">
-        <text class="username">{{userInfo.nickname||'立即登录'}}</text>
+        <text class="username">{{userInfo.nickname||'游客'}}</text>
         <image class="sex" wx:if="{{userInfo.token&&userInfo.gender!==0}}" src="{{userInfo.gender==2?'/static/images/girl.png':'/static/images/boy.png'}}"></image>
        <view class="info-box-detail" wx:if="{{userInfo.token}}">
        <text>{{userInfo.follows}}关注</text>

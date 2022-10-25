@@ -1,0 +1,12 @@
+<!--templete/mytemplete/mytemplete.wxml-->
+<!-- 定义模板 -->
+<template name="myTmp">
+  <view>
+   <view class="title">这是我自定义的模板</view>
+   <view class="userInfo">
+       <view class="username">用户名:{{username}}</view>
+       <view class="age">年龄:{{age}}</view>
+   </view>
+  </view>
+</template>
+
