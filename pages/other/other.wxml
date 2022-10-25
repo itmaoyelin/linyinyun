@@ -5,4 +5,7 @@
     <text>欢迎使用模板</text>
     <!-- 使用模板 -->
     <template is="myTmp" data="{{...personal}}" />
+    <!-- 测试获取用户唯一标识用户Id -->
+    <view class="getOpenId">测试获取用户唯一标识openID</view>
+    <button bindtap="getOpenId" type="primary">获取openId</button>
 </view>

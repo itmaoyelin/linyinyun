@@ -1,6 +1,6 @@
 //引入第三方包
 import PubSub from 'pubsub-js'
-import request from '../../utils/request'
+import request from '../../../utils/request'
 // pages/recommendSong/recommendSong.js
 Page({
 
@@ -49,7 +49,7 @@ Page({
         })
         let songInfo=JSON.stringify(e.currentTarget.dataset.song)
         wx.navigateTo({
-          url: '/pages/songDetail/songDetail?song='+encodeURIComponent(songInfo),
+          url: '/songPackage/pages/songDetail/songDetail?song='+encodeURIComponent(songInfo),
         })
     },
     /**

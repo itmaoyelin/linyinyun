@@ -1,5 +1,5 @@
 /* pages/songDetail/songDetail.wxss */
-@import '../../static/iconfont/font.wxss';
+@import '../../../static/iconfont/font.wxss';
 page{
     background-color: rgba(0, 0, 0, 0.5);
 }

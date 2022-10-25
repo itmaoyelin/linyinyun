@@ -58,7 +58,7 @@ Page({
     //跳转到每日推荐页
     gotoRecommend(){
         wx.navigateTo({
-          url: '/pages/recommendSong/recommendSong',
+          url: '/songPackage/pages/recommendSong/recommendSong',
         })
     },
     // 跳转到详情页
@@ -66,7 +66,7 @@ Page({
         // console.log(e)
         let songInfo=JSON.stringify(e.currentTarget.dataset.song)
         wx.navigateTo({
-          url: '/pages/songDetail/songDetail?song='+encodeURIComponent(songInfo),
+          url: '/songPackage/pages/songDetail/songDetail?song='+encodeURIComponent(songInfo),
         })
     },
     /**

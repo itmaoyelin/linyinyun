@@ -2,7 +2,7 @@
 <view class="recommendContainer">
     <!-- 头部区域 -->
     <view class="recommend-header">
-        <image class="header-pic" src="../../static/images/recommendSong/recommendSong.jpg"></image>
+        <image class="header-pic" src="../../../static/images/recommendSong/recommendSong.jpg"></image>
         <view class="recommend-date">
             <text class="day">{{day}} / </text>
             <text class="month">{{month}}</text>

@@ -65,7 +65,7 @@ Page({
         //调用函数跳转音乐详情
         let songInfo=JSON.stringify(e.detail.value)
         wx.navigateTo({
-          url: '/pages/songDetail/songDetail?song='+encodeURIComponent(songInfo),
+          url: '/songPackage/pages/songDetail/songDetail?song='+encodeURIComponent(songInfo),
         })
     },
     handleTouchStart(e){

@@ -4,11 +4,24 @@
         "pages/video/video",
         "pages/personal/personal",
         "pages/login/login",
-        "pages/recommendSong/recommendSong",
-        "pages/songDetail/songDetail",
         "pages/search/search",
         "pages/other/other"
     ],
+    "subPackages": [
+        {
+            "root": "songPackage",
+            "pages": [
+              "pages/recommendSong/recommendSong",
+              "pages/songDetail/songDetail"
+            ]
+          }
+    ],
+    "preloadRule":{
+        "pages/index/index": {
+            "network": "all",
+            "packages": ["songPackage"]
+          }
+    },
     "tabBar": {
         "selectedColor": "#d43c33",
         "backgroundColor": "#fff",

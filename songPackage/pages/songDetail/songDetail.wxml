@@ -3,10 +3,10 @@
     <view class="song-author">{{songInfo.ar[0].name}}</view>
     <!-- 摇杆图 -->
     <view class="circle"></view>
-    <image class="needle {{isPlay && 'needRotate'}}" src="../../static/images/song/needle.png"></image>
+    <image class="needle {{isPlay && 'needRotate'}}" src="../../../static/images/song/needle.png"></image>
     <!-- 磁盘图 -->
     <view class="discContainer {{isPlay && 'discAnimation'}}" >
-        <image class="disc" src="../../static/images/song/disc.png"></image>
+        <image class="disc" src="../../../static/images/song/disc.png"></image>
         <image class="music-img" src="{{songInfo.al.picUrl}}"></image>
     </view>
    <!-- 进度条区域 -->
